@@ -3,14 +3,13 @@ import { connect } from 'react-redux'
 import { Text, StyleSheet, View, FlatList, Button } from 'react-native'
 import * as actions from '../actions/actions'
 import ListItem from '../components/ListItem'
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createStackNavigator } from '@react-navigation/stack';
 
 class List extends Component {
 
   constructor(props) {
     super(props);
-    // this.state = {}
   }
 
   openPhoto = url => {
@@ -20,7 +19,6 @@ class List extends Component {
   }
 
   render() {
-    // console.log(this.props.list[0].urls.thumb)
 
     const data = []
     this.props.list.forEach(element => {

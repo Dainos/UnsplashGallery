@@ -1,4 +1,4 @@
-export const SET_LIST = 'GET_LIST'
+export const SET_LIST = 'SET_LIST'
 
 const setList = list => {
   return {
