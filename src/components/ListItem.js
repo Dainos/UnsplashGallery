@@ -2,11 +2,12 @@ import React from 'react'
 import { Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 
 
-export default function ListItem({ openPhoto, text, urlSmall, urlFull }) {
+export default function ListItem({ openPhoto, text, author, urlSmall, urlFull }) {
   return (
     <TouchableOpacity style={styles.item} onPress={() => openPhoto(urlFull)}>
       <Image style={styles.itemImage} source={{ uri: urlSmall }}></Image>
-      <Text style={styles.itemText}>{text}</Text>
+      <Text style={styles.itemText}>Author: {author + '\n\n' +text}}</Text>
+      {/* <Text style={styles.itemText}>{text}</Text> */}
     </TouchableOpacity>
   )
 }
@@ -28,7 +29,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 15,
     padding: 10,
-    width: '75%'
+    width: '75%',
+    // whiteSpace: 'pre-line'
   },
   itemImage: {
     width: 110,

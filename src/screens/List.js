@@ -20,23 +20,26 @@ class List extends Component {
   }
 
   render() {
-    console.log(this.props.list[0].urls.thumb)
+    // console.log(this.props.list[0].urls.thumb)
 
     const data = []
     this.props.list.forEach(element => {
-      data.push({ 
+      data.push({
         key: element.alt_description,
+        author: element.user.name,
         small: element.urls.thumb,
         full: element.urls.full
       })
     });
-    
+
 
     return (
       <View style={this.styles.view}>
         <FlatList
           data={data}
-          renderItem={({ item }) => <ListItem openPhoto={this.openPhoto} text={item.key}
+          renderItem={({ item }) => <ListItem openPhoto={this.openPhoto}
+            text={item.key}
+            author={item.author}
             urlSmall={item.small}
             urlFull={item.full} />}
         />

@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   },
   itemImage: {
     width: '100%',
-    height: '70%',
+    height: '100%',
+    resizeMode: 'contain'
   }
 })
